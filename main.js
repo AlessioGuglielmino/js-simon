@@ -15,7 +15,7 @@ const seconds = document.getElementById("seconds");
 const now = new Date();
 console.log(now);
 
-const t = new Date("2023-08-23 16:52");
+const t = new Date("2023-08-25 09:30");
 console.log(t);
 
 let differenzaTempo = t - now;
@@ -28,15 +28,12 @@ const coutDown = setInterval(function () {
     clearInterval(coutDown);
   } else {
     const oreMancanti = Math.floor(differenzaTempo / 3600000);
-    console.log(oreMancanti);
     hours.innerText = oreMancanti;
 
     const minutiMancanti = Math.floor((differenzaTempo % 3600000) / 60000);
-    console.log(minutiMancanti);
     minutes.innerText = minutiMancanti;
 
     const secondiMancanti = Math.floor((differenzaTempo % 60000) / 1000);
-    console.log(secondiMancanti);
     seconds.innerText = secondiMancanti;
   }
 }, 1000);
